@@ -1,4 +1,5 @@
 import datetime
+import time
 
 today = datetime.date.today()
 
@@ -29,3 +30,12 @@ my_time = now.strftime('%H:%M:%S')
 date = now.strftime('%Y-%m-%d')
 print('\n Time now is ',my_time)
 print('Date now is ',date)
+
+file = 'reports.txt'
+
+for i in range(10):
+    now = datetime.datetime.now()
+    timer = now.strftime('%H%M%S')
+    file_name = file[:-4] + timer + file[-4:]
+    print(file_name)
+    time.sleep(2)
